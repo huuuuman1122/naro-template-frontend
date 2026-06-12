@@ -6,10 +6,7 @@
     price: number
   }
 
-  const items = ref<Item[]>([
-  { name: 'たまご', price: 100 },
-  { name: 'りんご', price: 160 },
-])
+  const items = ref<Item[]>([])
 const newItemName = ref('')
 const newItemPrice = ref(0)
 
