@@ -28,7 +28,7 @@ const deleteItem = (name: string) => {
 <template>
   <div>ItemList</div>
    <ul>
-      <li v-for="item in items" :key="item.name">
+     <li v-for="item in items" :key="item.name" :class="{ over500: item.price >= 500 }">
         <div>名前: {{ item.name }}</div>
         <div>{{ item.price }} 円</div>
         <button @click="deleteItem(item.name)">削除</button>
@@ -47,4 +47,9 @@ const deleteItem = (name: string) => {
     </div>
 </template>
 
-<style></style>
+<style>
+.over500 {
+  color: red;
+}
+
+</style>
